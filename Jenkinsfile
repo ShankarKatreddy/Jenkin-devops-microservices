@@ -17,8 +17,10 @@ pipeline {
 			  echo "Integration Test"
 			}
 		}
-	} post {
-		always{
+	} 
+	
+	post {
+		always {
 			echo 'i am awesome. i run aways'
 		}
 		success {
