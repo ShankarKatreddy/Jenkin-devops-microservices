@@ -30,5 +30,7 @@ pipeline {
 			echo 'i run when u fail'
 		}
 	}
+
+	input 'ista dicha'
 	
 }
