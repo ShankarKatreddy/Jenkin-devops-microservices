@@ -2,9 +2,9 @@
 //DECLARATIVE
 pipeline {
 	//agent any
-	agent { dockerfile {
-            filename 'Dockerfile.jenkinsAgent'}
-			docker { image 'maven:3.6.3'} }
+	agent { docker { image 'maven:3.6.3'} 
+	    dockerfile {
+            filename 'Dockerfile.jenkinsAgent'} }
 	stages {
 		stage('Build') {
 			steps {
