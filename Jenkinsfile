@@ -49,7 +49,7 @@ pipeline {
 			steps {
 			  //"docker build -t in28min/currency-exange-devops: $env.Build_tag"
 			  script {
-				 dockerimage = docker.build("in28min/currency-exange-devops:${env.Build_tag}")
+				 dockerimage = docker.build("shankarkatreddy/currency-exange-devops:${env.Build_tag}")
 			  }
 			}
 		}
