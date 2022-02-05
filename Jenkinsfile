@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-			  runas 'mvn --version'	
+			  sh 'mvn --version'	
 			  echo "Build"
 	        }
 		}
