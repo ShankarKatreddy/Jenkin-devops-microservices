@@ -2,12 +2,20 @@
 //DECLARATIVE
 pipeline {
 	agent any
+	//agent { docker { image 'maven:3.8.4'} }
 	//agent { docker { image 'node:17.4'} }
+	environment {
+		dockerhome = tool 'Mydocker'
+		mavenhome = tool 'Mymaven'
+		path = "$dockerhome/bin:$mavenhome/bin:$path"
+	}
+
+
 	stages {
 		stage('Build') {
 			steps {
-			  //sh 'mvn --version'
-			  //sh 'node --version'	
+			  sh 'mvn --version'
+			  sh 'docker --version'	
 			  echo "Build"
 			  echo "path - $path"
 			  echo "Build_number - $env.Build_number"
