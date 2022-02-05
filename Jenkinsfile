@@ -30,12 +30,12 @@ pipeline {
 			  sh "mvn clean compile"
 			}
 		}
-		stage('Test') {
+		stage('test') {
 			steps {
-			  sh "mvn Test"
+			  sh "mvn test"
 			}
 		}
-		stage('Integration Test') {
+		stage('Integration test') {
 			steps {
 			  sh "mvn failsafe:integration-test failsafe:verify"
 			}
